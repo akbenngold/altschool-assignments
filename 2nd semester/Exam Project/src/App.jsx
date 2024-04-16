@@ -11,6 +11,7 @@ function App() {
   const itemsPerPage = 3;
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
+  const token = "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";
 
   useEffect(() => {
     const fetchRepos = async () => {
@@ -19,7 +20,7 @@ function App() {
           "https://api.github.com/users/akbenngold/repos",
           {
             headers: {
-              Authorization: "Bearer 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",
+              Authorization: "Bearer" + { token },
             },
           }
         );
