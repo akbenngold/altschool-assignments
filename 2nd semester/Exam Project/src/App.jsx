@@ -22,7 +22,9 @@ function App() {
         const response = await fetch(
           "https://api.github.com/users/akbenngold/repos",
           {
-            headers: {},
+            headers: {
+              Authorization: "Bearer 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",
+            },
           }
         );
         if (!response.ok) {
